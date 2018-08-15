@@ -3,10 +3,7 @@
 
 # SIGNAL-handler
 term_handler() {
- 
-  echo "terminating docker daemon ..."
-  /etc/init.d/docker stop
-  
+
   echo "terminating ssh ..."
   /etc/init.d/ssh stop
 
@@ -19,10 +16,6 @@ trap 'kill ${!}; term_handler' SIGINT SIGKILL SIGTERM SIGQUIT SIGTSTP SIGSTOP SI
 # run applications in the background
 echo "starting ssh ..."
 /etc/init.d/ssh start &
-
-# start docker deamon
-echo "starting docker daemon ..."
-/etc/init.d/docker start &
 
 # wait forever not to exit the container
 while true
