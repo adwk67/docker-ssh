@@ -1,4 +1,4 @@
-FROM sumglobal/rpi-openjdk:8-jdk-azul
+FROM resin/armv7hf-alpine-openjdk
 
 #enable building ARM container on x86 machinery on the web (comment out next line if built on Raspberry)
 RUN [ "cross-build-start" ]
