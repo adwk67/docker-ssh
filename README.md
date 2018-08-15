@@ -1,7 +1,3 @@
-## Docker Development Environment
-
-Made for [netPI](https://www.netiot.com/netpi/), the Open Edge Connectivity Ecosystem
-
 ### Debian with SSH as container development environment
 
 The image provided hereunder deploys a container to be used as container development environment.
@@ -43,11 +39,3 @@ Pulling the image from Docker Hub may take up to 5 minutes.
 The container starts the SSH service. 
 
 Login to it with an SSH client such as [putty](http://www.putty.org/) using netPI's IP address along with the mapped SSH port. Use the credentials `root` as user and `root` as password when asked and you are logged in as root.
-
-#### GitHub sources
-View the license information for the software in the Github project. As with all Docker images, these likely also contain other software which may be under other licenses (such as Bash, etc from the base distribution, along with any direct or indirect dependencies of the primary software being contained).
-As for any pre-built image usage, it is the image user's responsibility to ensure that any use of this image complies with any relevant licenses for all software contained within.
-
-To build the container for an ARM CPU on [Docker Hub](https://hub.docker.com/)(x86 based) the Dockerfile uses the method described here [resin.io](https://resin.io/blog/building-arm-containers-on-any-x86-machine-even-dockerhub/).
-
-[![N|Solid](http://www.hilscher.com/fileadmin/templates/doctima_2013/resources/Images/logo_hilscher.png)](http://www.hilscher.com)  Hilscher Gesellschaft fuer Systemautomation mbH  www.hilscher.com
