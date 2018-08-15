@@ -2,11 +2,11 @@
 
 Made for [netPI](https://www.netiot.com/netpi/), the Open Edge Connectivity Ecosystem
 
-### Debian with SSH, Docker and Git as container development environment
+### Debian with SSH as container development environment
 
-The image provided hereunder deploys a container with installed Docker and Git to be used as container development environment.
+The image provided hereunder deploys a container to be used as container development environment.
 
-Base of this image builds a tagged version of [debian:stretch](https://hub.docker.com/r/resin/armv7hf-debian/tags/) with enabled [SSH](https://en.wikipedia.org/wiki/Secure_Shell), a fully featured [Docker environment](https://www.docker.com/) and [Git](https://git-scm.com/) version control system.
+Base of this image builds a tagged version of [debian:stretch](https://hub.docker.com/r/resin/armv7hf-debian/tags/) with enabled [SSH](https://en.wikipedia.org/wiki/Secure_Shell).
 
 #### Container prerequisites
 
@@ -40,15 +40,11 @@ Pulling the image from Docker Hub may take up to 5 minutes.
 
 #### Accessing
 
-The container starts the SSH service and the Docker daemon automatically. 
+The container starts the SSH service. 
 
 Login to it with an SSH client such as [putty](http://www.putty.org/) using netPI's IP address along with the mapped SSH port. Use the credentials `root` as user and `root` as password when asked and you are logged in as root.
 
-Use [Docker CLI](https://docs.docker.com/engine/reference/commandline/docker/) commands as usual.
-
 #### GitHub sources
-The image is built from the GitHub project [netPI-container-build-environment](https://github.com/Hilscher/netPI-container-build-environment). It complies with the [Dockerfile](https://docs.docker.com/engine/reference/builder/) method to build a Docker image [automated](https://docs.docker.com/docker-hub/builds/).
-
 View the license information for the software in the Github project. As with all Docker images, these likely also contain other software which may be under other licenses (such as Bash, etc from the base distribution, along with any direct or indirect dependencies of the primary software being contained).
 As for any pre-built image usage, it is the image user's responsibility to ensure that any use of this image complies with any relevant licenses for all software contained within.
 
