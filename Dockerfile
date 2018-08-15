@@ -1,13 +1,7 @@
-#use latest armv7hf compatible raspbian OS version from group resin.io as base image
-FROM resin/armv7hf-debian:stretch
+FROM sumglobal/rpi-openjdk:8-jdk-azul
 
 #enable building ARM container on x86 machinery on the web (comment out next line if built on Raspberry)
 RUN [ "cross-build-start" ]
-
-#labeling
-LABEL maintainer="netpi@hilscher.com" \
-      version="V1.1.2" \
-      description="Containerized Docker and Git for netPI onboard container developments"
 
 #version
 ENV HILSCHERNETPI_CONTAINER_BUILD_ENVIRONMENT 1.1.2
