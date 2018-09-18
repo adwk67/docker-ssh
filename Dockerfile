@@ -3,6 +3,15 @@ FROM sumglobal/rpi-openjdk:8-jdk-azul
 #enable building ARM container on x86 machinery on the web (comment out next line if built on Raspberry)
 RUN [ "cross-build-start" ]
 
+#------------------
+# for rpi/ARM
+#------------------
+ENV KAFKA_HEAP_OPTS -Xmx256M\ -Xms256M
+#-----------------------------------------------------------------------------------------------------------------
+# Zulu embedded doesn't support the G1 compiler and other options set by default - These are a bit more reasonable
+#-----------------------------------------------------------------------------------------------------------------
+ENV KAFKA_JVM_PERFORMANCE_OPTS -server\ -XX:+DisableExplicitGC\ -Djava.awt.headless=true
+
 #copy files
 COPY "./init.d/*" /etc/init.d/
 
